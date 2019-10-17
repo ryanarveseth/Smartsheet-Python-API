@@ -88,7 +88,7 @@ def addRow(rType, pat, priority, email):
 
 
 # Return a new Row with updated cell values, else None to leave unchanged
-def evaluate_row_and_build_updates(email, rType, pat, priority):
+def getAddedRow(email, rType, pat, priority):
     # Row ID is our unique auto-incrementing primary column. 
     r_id = 0
     # new row ID
@@ -176,8 +176,7 @@ for column in sheet.columns:
     column_map[column.title] = column.id
 
 # Get the row to update with the attachment
-rowToUpdate = evaluate_row_and_build_updates(email, rType, pat, priority)
-
+rowToUpdate = getAddedRow(email, rType, pat, priority)
 
 if rowToUpdate == None:
     print("Something went wrong with uploading the row...")
