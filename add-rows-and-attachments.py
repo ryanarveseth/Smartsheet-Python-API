@@ -27,20 +27,20 @@ attachment = ""
 att_path = ""
 
 # Simple constructor function
-def initial(e, t, p, pr, a, ap):
+def initial(i_email, i_rType, i_pat, i_priority, i_attachment, i_att_path):
     # Set the global variables
     global email
-    email = e
     global rType
-    rType = t
     global pat
-    pat = p
     global priority
-    priority = pr
     global attachment
-    attachment = a
     global att_path
-    att_path = ap
+    email = i_email
+    rType = i_rType
+    pat = i_pat
+    priority = i_priority
+    attachment = i_attachment
+    att_path = i_att_path
 
 
 # Helper function to find cell in a row
